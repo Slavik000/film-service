@@ -22,28 +22,25 @@ public class FilmMicroserviceApplication {
 //додаємо монготаплейт
 	//як створюється repository?
 	@Bean
-	CommandLineRunner runner(FilmsRepository filmRepository, MongoTemplate mongoTamplate){
-		return args -> {
-			Film film = new Film("1654198","film first", 100);
-			Query query=new Query();
-			query.addCriteria(Criteria.where("public_film_id").is("1654198" ));
+	CommandLineRunner runner(FilmsRepository repository,
+							 MongoTemplate mongoTemplate  ){
+		return args ->{
 
-			List<Film> filmList = mongoTamplate.find(query, Film.class); //не виводить адекватний результат! :(
+			Film student = new Film("596857","olga");
 
+			Query query = new Query();
+			query.addCriteria(Criteria.where("public_film_id").is("596857"));
 
-			if(filmList.size()>1){
-				throw new IllegalStateException(
-						"ID already used!"
-				);
+			List<Film> films = mongoTemplate.find(query, Film.class);
+
+			if(films.size()>1){
+				throw new IllegalStateException("exist");
 			}
-			System.out.println("test");
 
-			if(filmList.isEmpty()){
-
-				filmRepository.insert(film);
-				System.out.println("Your profile created!");
+			if(films.isEmpty()){
+				repository.insert(student);
 			}else{
-				System.out.println("Your email already using!");
+				System.out.println("already using this email!");
 			}
 
 		};

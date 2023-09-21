@@ -4,9 +4,9 @@ import com.stepanenko.filmmicroservice.models.Film;
 import com.stepanenko.filmmicroservice.models.FilmsRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
 
-import java.awt.*;
+
+
 import java.util.List;
 
 @AllArgsConstructor
