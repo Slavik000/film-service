@@ -1,7 +1,7 @@
 package com.stepanenko.filmmicroservice;
 
 import com.stepanenko.filmmicroservice.models.Film;
-import com.stepanenko.filmmicroservice.models.FilmsRepository;
+import com.stepanenko.filmmicroservice.repository.FilmsRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
