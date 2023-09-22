@@ -24,6 +24,11 @@ public class FilmController {
         return "films/allFilms";
 
     }
+    /*@GetMapping()
+    public List<Film> getFilmList(){
+        return filmService.getFilmListService();
+
+    }*/
 
     /*@GetMapping("/{public_user_id}")
     public String getFilm(@PathVariable("public_user_id") String public_user_id , Model model){
