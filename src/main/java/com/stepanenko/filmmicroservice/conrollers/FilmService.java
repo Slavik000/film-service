@@ -19,7 +19,7 @@ public class FilmService {
     public List<Film> getFilmListService(){
         return filmRepository.findAll();
     }
-    public Film getFilmInfo(String public_film_id){
+    /*public Film getFilmInfo(String public_film_id){
         return filmRepository.findFilmByPublic_film_id(public_film_id);
-    }
+    }*/
 }

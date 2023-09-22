@@ -19,8 +19,8 @@ public class FilmMicroserviceApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(FilmMicroserviceApplication.class, args);
 	}
-//додаємо монготаплейт
-	//як створюється repository?
+
+
 	@Bean
 	CommandLineRunner runner(FilmsRepository repository,
 							 MongoTemplate mongoTemplate  ){

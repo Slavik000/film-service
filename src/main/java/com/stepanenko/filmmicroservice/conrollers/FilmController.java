@@ -21,13 +21,13 @@ public class FilmController {
     @GetMapping()
     public String getFilmList(Model model){
         model.addAttribute("allFilms",filmService.getFilmListService());
-        return "/films/allFilms";
+        return "films/allFilms";
 
     }
 
-    @GetMapping("/{public_user_id}")
+    /*@GetMapping("/{public_user_id}")
     public String getFilm(@PathVariable("public_user_id") String public_user_id , Model model){
         model.addAttribute("film", filmService.getFilmInfo(public_user_id));
         return "/films/film";
-    }
+    }*/
 }
